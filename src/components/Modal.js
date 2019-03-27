@@ -10,6 +10,9 @@ const Modal = ({ show, onHide }) => {
     <div className={css}>
       <Close onClick={onHide} className="modal__close" />
       <nav>
+        <AnchorLink onClick={onHide} href="#esittely">
+          Esittely
+        </AnchorLink>
         <AnchorLink onClick={onHide} href="#hoidot">
           Hoidot
         </AnchorLink>
