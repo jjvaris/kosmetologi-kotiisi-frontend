@@ -1,12 +1,13 @@
 {
-  "name": "niina-varis",
+  "name": "kosmetologi-kotiisi-frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^16.8.4",
     "react-anchor-link-smooth-scroll": "^1.0.11",
     "react-dom": "^16.8.4",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "react-smooth-collapse": "^2.0.1"
   },
   "scripts": {
     "start": "react-scripts start",

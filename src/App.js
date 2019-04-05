@@ -7,10 +7,13 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import niina from './static/niina.jpg';
 import ContactForm from './components/ContactForm';
 import PriceTable from './components/PriceTable';
+import Instructions from './components/Instructions';
+import SmoothCollapse from 'react-smooth-collapse';
 
 class App extends Component {
   state = {
-    showModal: false
+    showModal: false,
+    showInstructions: false
   };
 
   showModal = () => {
@@ -29,7 +32,7 @@ class App extends Component {
             <Burger onClick={this.showModal} />
             <Modal show={this.state.showModal} onHide={this.hideModal} />
           </nav>
-          <header className="app__header">
+          <header className="app__header fade-in">
             <div className="app__title">
               <FlourishFrame />
               <h3 className="app__beauty_by font-playfair">
@@ -83,54 +86,87 @@ class App extends Component {
           <section id="palvelut" className="black">
             <div>
               <h1>Palvelut</h1>
-              <p>
-                Mandamus deterruisset et his, quot timeam alienum quo ea. Amet
-                nominavi cum ea. Ad vel quod iisque virtute, ad duo justo viris
-                euismod. Cum eu ludus legendos constituam, ei pri vidisse
-                recteque accusamus. Per ne nullam voluptua consetetur. Sed ne
-                errem postea.
-              </p>
+              <div className="sokerointi">
+                <h3>Sokerointi </h3>
+                <p>Täydellinen sokerointi aijai! Karvat vekka lähtee...</p>
+                <button
+                  className="sokerointi__button"
+                  onClick={() =>
+                    this.setState({
+                      showInstructions: !this.state.showInstructions
+                    })
+                  }
+                >
+                  {this.state.showInstructions ? '⇧' : '⇩'} Tutustu sokeroinnin
+                  ohjeisiin {this.state.showInstructions ? '⇧' : '⇩'}
+                </button>
+                <SmoothCollapse expanded={this.state.showInstructions}>
+                  <Instructions />
+                </SmoothCollapse>
+              </div>
             </div>
           </section>
           <section id="hinnasto">
             <h1>Hinnasto</h1>
+
             <PriceTable />
+            <p
+              style={{
+                fontSize: '1.2em',
+                maxWidth: '500px',
+                textAlign: 'center'
+              }}
+            >
+              Kutsu kotiisi myös kaverisi ja saat alennusta hoidoistasi{' '}
+              <b>-10%</b> per jokainen henkilö!
+            </p>
+            <p
+              style={{
+                fontSize: '1.2em',
+                maxWidth: '500px',
+                textAlign: 'center'
+              }}
+            >
+              Ota rohkeasti yhteyttä ja pyydä tarjous esimerkiksi
+              meikki-illasta!
+            </p>
           </section>
           <section id="ota-yhteytta" className="black">
             <h1>Ota yhteyttä</h1>
             <ContactForm />
           </section>
-          <section id="yhteystiedot">
-            <div>
-              <h1>Yhteystiedot</h1>
-              <p>Niina Varis</p>
-              <p>Y: 2332198-1</p>
-              <p>040 4897911</p>
-              <p>niina.varis@gmail.com</p>
-
-              <div className="socials">
-                <a href="http://facebook.com">
-                  <Facebook style={{ marginRight: '15px' }} />
-                </a>
-                <a href="http://instagram.com">
-                  <Instagram />
-                </a>
-              </div>
-              <p
-                style={{
-                  textAlign: 'center',
-                  paddingTop: '30px',
-                  fontSize: '0.7em'
-                }}
-              >
-                COPYRIGHT &copy; 2019
-              </p>
-              <p style={{ fontSize: '0.7em', textAlign: 'center' }}>
-                Design by Jouni
-              </p>
-            </div>
-          </section>
         </main>
+        <footer id="yhteystiedot">
+          <div>
+            <h1>Yhteystiedot</h1>
+            <p>Niina Varis</p>
+            <p>SKY-kosmetolgi, lähihoitaja</p>
+            <p>040 058 6586</p>
+            <p>niina.varis@gmail.com</p>
+            <p>Y: 2332198-1</p>
+
+            <div className="socials">
+              <a href="http://facebook.com">
+                <Facebook style={{ marginRight: '15px' }} />
+              </a>
+              <a href="http://instagram.com">
+                <Instagram />
+              </a>
+            </div>
+            <p
+              style={{
+                textAlign: 'center',
+                paddingTop: '30px',
+                fontSize: '0.7em'
+              }}
+            >
+              COPYRIGHT &copy; 2019
+            </p>
+            <p style={{ fontSize: '0.7em', textAlign: 'center' }}>
+              Design by Jouni
+            </p>
+          </div>
+        </footer>
       </React.Fragment>
     );
   }
