@@ -54,7 +54,7 @@ class App extends Component {
           </div>
         </div>
         <main>
-          <section id="esittely" className="black">
+          <section id="esittely" className="dark">
             <div>
               <img className="profile-img" src={niina} alt="Niina Varis" />
               <h1>Niina</h1>
@@ -83,7 +83,7 @@ class App extends Component {
               </p>
             </div>
           </section>
-          <section id="palvelut" className="black">
+          <section id="palvelut" className="dark">
             <div>
               <h1>Palvelut</h1>
               <div className="sokerointi">
@@ -131,7 +131,7 @@ class App extends Component {
               meikki-illasta!
             </p>
           </section>
-          <section id="ota-yhteytta" className="black">
+          <section id="ota-yhteytta" className="dark">
             <h1>Ota yhteyttä</h1>
             <ContactForm />
           </section>

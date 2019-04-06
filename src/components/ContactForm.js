@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
+import axios from 'axios';
+import BeatLoader from 'react-spinners/BeatLoader';
 
 export default class ContactForm extends Component {
   state = {
-    fullName: '',
-    email: '',
-    phoneNumber: '',
-    message: '',
+    formData: {
+      name: '',
+      email: '',
+      phoneNumber: '',
+      message: ''
+    },
     errors: {},
     touched: false,
-    submitted: false
+    submitted: false,
+    submitting: false
   };
 
   validators = {
-    fullName: {
+    name: {
       isValid: input => input && input.length >= 0,
       error: 'Nimi on pakollinen'
     },
@@ -34,7 +39,8 @@ export default class ContactForm extends Component {
       errors[name] = undefined;
       this.setState({ errors });
     }
-    this.setState({ [name]: value });
+    const formData = { ...this.state.formData, [name]: value };
+    this.setState({ formData });
   };
 
   handleValidation = event => {
@@ -52,23 +58,45 @@ export default class ContactForm extends Component {
     event.preventDefault();
     if (!this.formIsValid()) return;
     console.log('lähetetään form', this.state);
-    this.setState({
-      fullName: '',
-      email: '',
-      phoneNumber: '',
-      message: '',
-      errors: {},
-      touched: false,
-      submitted: true
-    });
+    this.setState({ submitting: true });
+    const { email, name, phoneNumber, message } = this.state.formData;
+
+    axios
+      .post('https://kosmetologi-kotiisi-email.herokuapp.com/api/email', {
+        from: email,
+        name,
+        phoneNumber,
+        message
+      })
+      .then(response => {
+        console.log(response);
+        console.log('Form submitted');
+        this.setState({
+          formData: {
+            name: '',
+            email: '',
+            phoneNumber: '',
+            message: ''
+          },
+          errors: {},
+          touched: false,
+          submitted: true,
+          submitting: false
+        });
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        const errors = { ...this.state.errors, submit: true };
+        this.setState({ errors, submitting: false });
+      });
   };
 
   formIsValid() {
     console.log('validating form...', this.state);
-    const { fullName, email, message } = this.state;
+    const { name, email, message } = this.state.formData;
     const errors = {};
-    if (!this.validators.fullName.isValid(fullName))
-      errors.fullName = this.validators.fullName.error;
+    if (!this.validators.name.isValid(name))
+      errors.name = this.validators.name.error;
     if (!this.validators.email.isValid(email))
       errors.email = this.validators.email.error;
     if (!this.validators.message.isValid(message))
@@ -79,25 +107,30 @@ export default class ContactForm extends Component {
 
   render() {
     return this.state.submitted ? (
-      <div>Kiitos viestistäsi. Palaan asiaan mahdollisimman pian!</div>
+      <div className="form-submitted">
+        <div>
+          <p>Kiitos viestistäsi.</p>
+          <p>Palaan asiaan mahdollisimman pian!</p>
+        </div>
+      </div>
     ) : (
       <form className="form" onSubmit={this.handleSubmit}>
         <div className="text-input">
           <input
             type="text"
-            name="fullName"
+            name="name"
             placeholder="Nimi *"
             className={`${
-              this.state.errors.fullName
+              this.state.errors.name
                 ? 'form__input--error form__input'
                 : 'form__input'
             } `}
             onChange={this.handleChange}
             onBlur={this.handleValidation}
-            value={this.state.fullName}
+            value={this.state.formData.name}
           />
-          {this.state.errors.fullName && (
-            <span className="form__error">{this.state.errors.fullName}</span>
+          {this.state.errors.name && (
+            <span className="form__error">{this.state.errors.name}</span>
           )}
         </div>
         <div className="text-input">
@@ -112,7 +145,7 @@ export default class ContactForm extends Component {
             } `}
             onChange={this.handleChange}
             onBlur={this.handleValidation}
-            value={this.state.email}
+            value={this.state.formData.email}
           />
           {this.state.errors.email && (
             <span className="form__error">{this.state.errors.email}</span>
@@ -125,6 +158,7 @@ export default class ContactForm extends Component {
             placeholder="Puhelinnumero"
             className="form__input"
             onChange={this.handleChange}
+            value={this.state.formData.phoneNumber}
           />
         </div>
         <div className="textarea">
@@ -138,14 +172,28 @@ export default class ContactForm extends Component {
             } `}
             onChange={this.handleChange}
             onBlur={this.handleValidation}
-            value={this.state.message}
+            value={this.state.formData.message}
           />
           {this.state.errors.message && (
             <span className="form__error">{this.state.errors.message}</span>
           )}
         </div>
-        <button type="submit" className="form__button">
-          LÄHETÄ
+        {this.state.errors.submit && (
+          <div className="form__api-error">
+            Virhe viestin lähetyksessä. Yritä uudelleen tai ota yhteyttä
+            sähköpostitse niina.varis@gmail.com.
+          </div>
+        )}
+        <button
+          type="submit"
+          className="form__button"
+          disabled={this.state.submitting}
+        >
+          {this.state.submitting ? (
+            <BeatLoader size={7} color={'#FFFFFF'} />
+          ) : (
+            'LÄHETÄ'
+          )}
         </button>
       </form>
     );
