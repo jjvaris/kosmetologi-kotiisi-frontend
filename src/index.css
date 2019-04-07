@@ -58,11 +58,18 @@ section > div {
   grid-template-rows: 70px auto 100px;
 }
 
-.app__nav {
+.app__mobile-nav {
   align-self: center;
   justify-self: end;
   padding-right: 21px;
   display: flex;
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 700px) {
+  .app__mobile-nav {
+    visibility: visible;
+  }
 }
 
 .app__title {

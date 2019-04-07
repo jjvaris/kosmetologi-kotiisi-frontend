@@ -28,7 +28,7 @@ class App extends Component {
     return (
       <React.Fragment>
         <div className="app">
-          <nav className="app__nav">
+          <nav className="app__mobile-nav">
             <Burger onClick={this.showModal} />
             <Modal show={this.state.showModal} onHide={this.hideModal} />
           </nav>
