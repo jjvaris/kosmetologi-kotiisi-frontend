@@ -65,8 +65,10 @@ class App extends Component {
         </div>
         <main>
           <section id="esittely">
-            <div>
-              <img className="profile-img" src={niina} alt="Niina Varis" />
+            <div className="introduction">
+              <div className="avatar">
+                <img className="avatar__img" src={niina} alt="Niina Varis" />
+              </div>
               <h1>Niina Varis</h1>
               <p>
                 Hei olen Niina ja lorem Ipsum is simply dummy text of the

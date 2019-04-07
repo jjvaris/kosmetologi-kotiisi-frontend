@@ -153,11 +153,27 @@ section > div {
   cursor: pointer;
 }
 
-.profile-img {
-  width: 100%;
-  max-width: 200px;
-  max-height: 200px;
+.introduction {
+  display: grid;
+  justify-items: center;
+}
+
+.avatar {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
   border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.4) inset;
+  -moz-box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.4) inset;
+  -webkit-box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.4) inset;
+}
+
+.avatar__img {
+  width: 100%;
+  border-radius: 50%;
+  z-index: -1;
+  position: relative;
 }
 
 #burger {
