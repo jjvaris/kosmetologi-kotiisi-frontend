@@ -1,7 +1,8 @@
 :root {
   --global--dark-bg-color: #191606;
   --global--bg-color: #ffffff;
-  --global--font-color: black;
+  --global--dark-font-color: black;
+  --global--font-color: white;
   /* --dark-bg-color: #0f1613; */
 }
 
@@ -54,21 +55,54 @@ section > div {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
-  display: grid;
-  grid-template-rows: 70px auto 100px;
 }
 
-.app__mobile-nav {
-  align-self: center;
+.wrapper {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 70px auto 100px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.app__nav--mobile {
   justify-self: end;
   padding-right: 21px;
+  display: none;
+}
+
+.app__nav--desktop {
   display: flex;
-  visibility: hidden;
+  justify-self: center;
+}
+
+.app__nav {
+  align-self: center;
+}
+
+.app__nav > a {
+  display: inline;
+  color: var(--global--font-color);
+  text-decoration: none;
+  margin: 5px 0px 5px 20px;
+  padding: 10px 20px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.app__nav > a:hover {
+  border: 2px solid white;
+  /* background-color: rgba(0, 0, 0, 0.1); */
 }
 
 @media only screen and (max-width: 700px) {
-  .app__mobile-nav {
-    visibility: visible;
+  .app__nav--mobile {
+    display: flex;
+  }
+  .app__nav--desktop {
+    display: none;
   }
 }
 
@@ -78,7 +112,7 @@ section > div {
   /* border-color: white; */
   padding: 5px 0px 5px 0px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.2); */
 }
 
 .app__beauty_by {
@@ -121,8 +155,8 @@ section > div {
 
 .profile-img {
   width: 100%;
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 200px;
+  max-height: 200px;
   border-radius: 50%;
 }
 
@@ -481,11 +515,13 @@ td.price-table__service {
 .instructions {
   max-width: 700px;
   text-align: start;
+  border-bottom: 1px solid white;
 }
 
 /* Palvelut section sokerointi */
 .sokerointi {
   text-align: start;
+  word-break: normal;
 }
 
 .sokerointi__button {

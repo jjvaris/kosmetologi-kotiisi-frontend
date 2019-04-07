@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 
-export const Instagram = () => (
+export const Instagram = ({ size = 24 }) => (
   <span>
     <svg
       className="icon"
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
     >
       <path
@@ -15,15 +15,15 @@ export const Instagram = () => (
       />
     </svg>
   </span>
-)
+);
 
-export const Facebook = () => (
+export const Facebook = ({ size = 24 }) => (
   <span>
     <svg
       className="icon"
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width={size}
+      height={size}
       viewBox="0 0 24 24"
     >
       <path
@@ -32,7 +32,7 @@ export const Facebook = () => (
       />
     </svg>
   </span>
-)
+);
 
 export const Github = () => (
   <span>
@@ -49,7 +49,7 @@ export const Github = () => (
       />
     </svg>
   </span>
-)
+);
 
 export const Linkedin = () => (
   <span>
@@ -66,4 +66,4 @@ export const Linkedin = () => (
       />
     </svg>
   </span>
-)
+);

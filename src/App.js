@@ -28,36 +28,46 @@ class App extends Component {
     return (
       <React.Fragment>
         <div className="app">
-          <nav className="app__mobile-nav">
-            <Burger onClick={this.showModal} />
-            <Modal show={this.state.showModal} onHide={this.hideModal} />
-          </nav>
-          <header className="app__header fade-in">
-            <div className="app__title">
-              <FlourishFrame />
-              <h3 className="app__beauty_by font-playfair">
-                Kosmetologi kotiisi
-              </h3>
-              <h1 className="app__company_name font-playfair">Niina Varis</h1>
-              <FlourishFrame reversed />
-              {/* <p>KAUNEUDEN HOITOPALVELUT</p> */}
-            </div>
-          </header>
-          <div className="app__scroll">
-            <div id="scroll-down">
-              <AnchorLink href="#esittely">
-                <span />
-                <span />
-                <span />
-              </AnchorLink>
+          <div className="wrapper">
+            <nav className="app__nav app__nav--mobile">
+              <Burger onClick={this.showModal} />
+              <Modal show={this.state.showModal} onHide={this.hideModal} />
+            </nav>
+            <nav className="app__nav app__nav--desktop">
+              <AnchorLink href="#esittely">Esittely</AnchorLink>
+              {/* <AnchorLink href="#hoidot">Hoidot</AnchorLink> */}
+              <AnchorLink href="#palvelut">Palvelut</AnchorLink>
+              <AnchorLink href="#hinnasto">Hinnasto</AnchorLink>
+              <AnchorLink href="#ota-yhteytta">Ota Yhteyttä</AnchorLink>
+              <AnchorLink href="#yhteystiedot">Yhteystiedot</AnchorLink>
+            </nav>
+            <header className="app__header fade-in">
+              <div className="app__title">
+                <FlourishFrame />
+                <h3 className="app__beauty_by font-playfair">
+                  Kosmetologi kotiisi
+                </h3>
+                <h1 className="app__company_name font-playfair">Niina Varis</h1>
+                <FlourishFrame reversed />
+                {/* <p>KAUNEUDEN HOITOPALVELUT</p> */}
+              </div>
+            </header>
+            <div className="app__scroll">
+              <div id="scroll-down">
+                <AnchorLink href="#esittely">
+                  <span />
+                  <span />
+                  <span />
+                </AnchorLink>
+              </div>
             </div>
           </div>
         </div>
         <main>
-          <section id="esittely" className="dark">
+          <section id="esittely">
             <div>
               <img className="profile-img" src={niina} alt="Niina Varis" />
-              <h1>Niina</h1>
+              <h1>Niina Varis</h1>
               <p>
                 Hei olen Niina ja lorem Ipsum is simply dummy text of the
                 printing and typesetting industry. Lorem Ipsum has been the
@@ -66,28 +76,11 @@ class App extends Component {
               </p>
             </div>
           </section>
-          <section id="hoidot">
-            <div>
-              <h1>Hoidot</h1>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
-              </p>
-            </div>
-          </section>
           <section id="palvelut" className="dark">
             <div>
               <h1>Palvelut</h1>
               <div className="sokerointi">
-                <h3>Sokerointi </h3>
+                <h3>Sokerointi</h3>
                 <p>Täydellinen sokerointi aijai! Karvat vekka lähtee...</p>
                 <button
                   className="sokerointi__button"
@@ -103,6 +96,21 @@ class App extends Component {
                 <SmoothCollapse expanded={this.state.showInstructions}>
                   <Instructions />
                 </SmoothCollapse>
+              </div>
+              <div className="sokerointi">
+                <h3>Hoidot</h3>
+                <p>
+                  Lorem Ipsum is simply dummy text of the printing and
+                  typesetting industry. Lorem Ipsum has been the industry's
+                  standard dummy text ever since the 1500s, when an unknown
+                  printer took a galley of type and scrambled it to make a type
+                  specimen book. It has survived not only five centuries, but
+                  also the leap into electronic typesetting, remaining
+                  essentially unchanged. It was popularised in the 1960s with
+                  the release of Letraset sheets containing Lorem Ipsum
+                  passages, and more recently with desktop publishing software
+                  like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
               </div>
             </div>
           </section>
