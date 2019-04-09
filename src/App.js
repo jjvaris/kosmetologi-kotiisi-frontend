@@ -9,6 +9,7 @@ import ContactForm from './components/ContactForm';
 import PriceTable from './components/PriceTable';
 import Instructions from './components/Instructions';
 import SmoothCollapse from 'react-smooth-collapse';
+import Div100 from './components/Div100';
 
 class App extends Component {
   state = {
@@ -27,7 +28,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="app">
+        <Div100 className="app">
           <div className="wrapper">
             <nav className="app__nav app__nav--mobile">
               <Burger onClick={this.showModal} />
@@ -62,7 +63,7 @@ class App extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </Div100>
         <main>
           <section id="esittely">
             <div className="introduction">
