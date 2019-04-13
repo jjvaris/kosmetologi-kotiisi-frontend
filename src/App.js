@@ -7,6 +7,9 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import niina from './static/niina.jpg';
 import lady from './static/lady2.jpg';
 import sokerointi from './static/sokerointi.jpg';
+import image1 from './static/i_1.jpg';
+import image2 from './static/i_2.jpg';
+import image3 from './static/i_3.jpg';
 import ContactForm from './components/ContactForm';
 import PriceTable from './components/PriceTable';
 import Instructions from './components/Instructions';
@@ -46,12 +49,12 @@ class App extends Component {
             </nav>
             <header className="app__header fade-in">
               <div className="app__title">
-                <FlourishFrame />
+                {/* <FlourishFrame /> */}
                 <h3 className="app__beauty_by font-playfair">
                   Kosmetologi kotiisi
                 </h3>
                 <h1 className="app__company_name font-playfair">Niina Varis</h1>
-                <FlourishFrame reversed />
+                {/* <FlourishFrame reversed /> */}
                 {/* <p>KAUNEUDEN HOITOPALVELUT</p> */}
               </div>
             </header>
@@ -125,6 +128,17 @@ class App extends Component {
               </div>
             </div>
           </section>
+          <div className="image-grid">
+            <div style={{ backgroundImage: `url(${lady})` }} />
+            <div
+              style={{
+                backgroundImage: `url(${image1})`,
+                backgroundPosition: 'unset'
+              }}
+            />
+            <div style={{ backgroundImage: `url(${image2})` }} />
+            <div style={{ backgroundImage: `url(${image3})` }} />
+          </div>
           <section id="hinnasto">
             {/* <img
               src={lady}
@@ -136,17 +150,18 @@ class App extends Component {
             <PriceTable />
             <p
               style={{
-                fontSize: '1.2em',
+                fontSize: '1.1em',
                 maxWidth: '500px',
-                textAlign: 'center'
+                textAlign: 'center',
+                marginTop: '30px'
               }}
             >
-              Kutsu kotiisi myös kaverisi ja saat alennusta hoidoistasi{' '}
-              <b>-10%</b> per jokainen henkilö!
+              Kutsu kotiisi myös kaverisi ja saat alennusta hoidoistasi -10% per
+              jokainen henkilö!
             </p>
             <p
               style={{
-                fontSize: '1.2em',
+                fontSize: '1.1em',
                 maxWidth: '500px',
                 textAlign: 'center'
               }}
