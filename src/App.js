@@ -5,6 +5,8 @@ import { Facebook, Instagram } from './components/socials';
 import FlourishFrame from './components/FlourishFrame';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import niina from './static/niina.jpg';
+import lady from './static/lady2.jpg';
+import sokerointi from './static/sokerointi.jpg';
 import ContactForm from './components/ContactForm';
 import PriceTable from './components/PriceTable';
 import Instructions from './components/Instructions';
@@ -66,7 +68,7 @@ class App extends Component {
         </Div100>
         <main>
           <section id="esittely">
-            <div className="introduction">
+            <div className="introduction content">
               <div className="avatar">
                 <img className="avatar__img" src={niina} alt="Niina Varis" />
               </div>
@@ -79,12 +81,18 @@ class App extends Component {
               </p>
             </div>
           </section>
+
+          {/* <img
+            src={sokerointi}
+            alt="sokerointi promokuva"
+            className="sokerointi__img"
+          /> */}
           <section id="palvelut" className="dark">
-            <div>
+            <div className="content">
               <h1>Palvelut</h1>
               <div className="sokerointi">
                 <h3>Sokerointi</h3>
-                <p>Täydellinen sokerointi aijai! Karvat vekka lähtee...</p>
+                <p>Tekstiä sokeroinnista yms.</p>
                 <button
                   className="sokerointi__button"
                   onClick={() =>
@@ -118,6 +126,11 @@ class App extends Component {
             </div>
           </section>
           <section id="hinnasto">
+            {/* <img
+              src={lady}
+              alt="Alexandria promokuva"
+              style={{ width: '100%' }}
+            /> */}
             <h1>Hinnasto</h1>
 
             <PriceTable />

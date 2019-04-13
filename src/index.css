@@ -3,6 +3,8 @@
   --global--bg-color: #ffffff;
   --global--dark-font-color: black;
   --global--font-color: white;
+  --global--font-color--hover: lightgray;
+  --global--dark-font--white--hover: lightgray;
   /* --dark-bg-color: #0f1613; */
 }
 
@@ -25,7 +27,7 @@ h5,
 h6 {
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  font-weight: 700;
+  font-weight: 200;
 }
 
 h1 {
@@ -40,18 +42,23 @@ footer {
   text-align: center;
 }
 
-section > div {
+section .content {
+  width: 100%;
+  max-width: 500px;
+}
+
+section img {
   width: 100%;
   max-width: 500px;
 }
 
 .dark {
   background-color: var(--global--dark-bg-color);
-  color: white;
+  color: var(--global--font-color);
 }
 
 .app {
-  background: url(./static/1.jpg) center;
+  background: url(./static/2.jpg) center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -135,7 +142,7 @@ section > div {
   justify-content: center;
   /* font-size: calc(10px + 2vmin); */
 
-  color: white;
+  color: var(--global--font-color);
 }
 
 .app__scroll {
@@ -149,7 +156,7 @@ section > div {
   border: none;
   padding: 0;
   width: 40px;
-  color: white;
+  color: var(--global--font-color);
   cursor: pointer;
 }
 
@@ -170,6 +177,27 @@ section > div {
 }
 
 .avatar__img {
+  width: 100%;
+  border-radius: 50%;
+  z-index: -1;
+  position: relative;
+}
+
+.sokerointi__img {
+  /* -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; */
+
+  width: 100%;
+  /* background: url(./static/sokerointi.jpg) center; */
+
+  /* background-size: cover; */
+  /* box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.4) inset;
+  -moz-box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.4) inset;
+  -webkit-box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.4) inset; */
+}
+
+.circle img {
   width: 100%;
   border-radius: 50%;
   z-index: -1;
@@ -200,7 +228,7 @@ section > div {
 #burger span {
   display: block;
   /* background: white; */
-  background-color: white;
+  background-color: var(--global--bg-color);
   height: 2px;
   width: 100%;
   border-radius: 2px;
@@ -217,7 +245,7 @@ section > div {
   background-color: black;
   display: grid;
   grid-template-rows: 70px auto 70px;
-  color: white;
+  color: var(--global--font-color);
   align-items: center;
   justify-items: center;
   text-align: center;
@@ -251,18 +279,18 @@ section > div {
 }
 
 .modal a:hover {
-  color: lightgray;
+  color: var(--global--font-color--hover);
 }
 
 .modal__close {
   justify-self: end;
   margin-right: 22.5px;
   cursor: pointer;
-  color: white;
+  color: var(--global--font-color);
 }
 
 .modal__close:hover {
-  color: lightgray;
+  color: var(--global--font-color--hover);
 }
 
 .modal__socials {
@@ -279,16 +307,16 @@ section > div {
 }
 
 .socials svg {
-  color: black;
+  color: var(--global--dark-font-color);
 }
 
 .icon {
-  color: white;
+  color: var(--global--font-color);
   padding: 0px 10px 0px 0px;
 }
 
 .icon:hover {
-  color: gray;
+  color: var(--global--font-color--hover);
 }
 
 svg {
@@ -321,8 +349,8 @@ svg {
   width: 24px;
   height: 24px;
   margin-left: -12px;
-  border-left: 1.2px solid #fff;
-  border-bottom: 1.2px solid #fff;
+  border-left: 1.2px solid var(--global--font-color);
+  border-bottom: 1.2px solid var(--global--font-color);
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
   -webkit-animation: sdb07 2s infinite;
@@ -434,9 +462,9 @@ svg {
 }
 
 .form__button {
-  background-color: #191606;
-  color: white;
-  border: 2px solid white;
+  background-color: var(--global--dark-bg-color);
+  color: var(--global--font-color);
+  border: 2px solid var(--global--font-color);
   height: 40px;
   width: 150px;
   justify-self: end;
@@ -447,8 +475,8 @@ svg {
 }
 
 .form__button:hover:enabled {
-  background-color: white;
-  color: black;
+  background-color: var(--global--font-color);
+  color: var(--global--dark-font-color);
   -webkit-transition: background-color 200ms linear, color 200ms linear;
   -ms-transition: background-color 200ms linear, color 200ms linear;
   transition: background-color 200ms linear, color 200ms linear;
@@ -527,7 +555,7 @@ td.price-table__service {
 .instructions {
   max-width: 700px;
   text-align: start;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--global--font-color);
 }
 
 /* Palvelut section sokerointi */
@@ -538,10 +566,9 @@ td.price-table__service {
 
 .sokerointi__button {
   background: none;
-  color: inherit;
   border: none;
   padding: 0;
-  color: white;
+  color: var(--global--font-color);
   cursor: pointer;
   text-decoration: underline;
 }

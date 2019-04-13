@@ -13,9 +13,6 @@ const Modal = ({ show, onHide }) => {
         <AnchorLink onClick={onHide} href="#esittely">
           Esittely
         </AnchorLink>
-        <AnchorLink onClick={onHide} href="#hoidot">
-          Hoidot
-        </AnchorLink>
         <AnchorLink onClick={onHide} href="#palvelut">
           Palvelut
         </AnchorLink>
