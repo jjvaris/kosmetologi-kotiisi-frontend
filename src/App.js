@@ -84,7 +84,6 @@ class App extends Component {
               </p>
             </div>
           </section>
-
           {/* <img
             src={sokerointi}
             alt="sokerointi promokuva"
@@ -170,6 +169,9 @@ class App extends Component {
               meikki-illasta!
             </p>
           </section>
+          <div className="bg-image-fixed">
+            <h1>Jotain tekstiä</h1>
+          </div>
           <section id="ota-yhteytta" className="dark">
             <h1>Ota yhteyttä</h1>
             <ContactForm />
