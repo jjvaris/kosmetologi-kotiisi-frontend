@@ -181,7 +181,7 @@ export default class ContactForm extends Component {
         {this.state.errors.submit && (
           <div className="form__api-error">
             Virhe viestin lähetyksessä. Yritä uudelleen tai ota yhteyttä
-            sähköpostitse niina.varis@gmail.com.
+            sähköpostitse varis.niina@gmail.com.
           </div>
         )}
         <button

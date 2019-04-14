@@ -8,78 +8,84 @@ const PriceTable = () => (
         <th className="price-table__price">Hinta EUR</th>
       </tr>
       <tr className="price-table__row">
-        <td className="price-table__service">Kasvohoidot</td>
-        <td className="price-table__price">Alk. 30 €</td>
+        <td className="price-table__service">Sokeroinnit</td>
+        <td className="price-table__price">Alk. 10 €</td>
       </tr>
       <tr className="price-table__row">
         <td className="price-table__service price-table__service--special">
-          Peruskasvohoito (60 min)
+          Sääret
         </td>
         <td className="price-table__price">30 €</td>
       </tr>
       <tr className="price-table__row">
         <td className="price-table__service price-table__service--special">
-          Erikoiskasvohoito (90 min)
+          Reidet
+        </td>
+        <td className="price-table__price">30 €</td>
+      </tr>
+      <tr className="price-table__row">
+        <td className="price-table__service price-table__service--special">
+          Sääret ja reidet
         </td>
         <td className="price-table__price">50 €</td>
       </tr>
       <tr className="price-table__row">
-        <td className="price-table__service">Käsi ja jalkahoidot</td>
-        <td className="price-table__price">Alk. 50 €</td>
-      </tr>
-      <tr className="price-table__row">
         <td className="price-table__service price-table__service--special">
-          Peruskäsihoito (45 min)
-        </td>
-        <td className="price-table__price">50 €</td>
-      </tr>
-      <tr className="price-table__row">
-        <td className="price-table__service price-table__service--special">
-          Erikoiskäsihoito (70 min)
-        </td>
-        <td className="price-table__price">65 €</td>
-      </tr>
-      <tr className="price-table__row">
-        <td className="price-table__service price-table__service--special">
-          Perusjalkahoito (70 min)
-        </td>
-        <td className="price-table__price">65 €</td>
-      </tr>
-      <tr className="price-table__row">
-        <td className="price-table__service price-table__service--special">
-          Erikoisjalkahoito (90 min)
-        </td>
-        <td className="price-table__price">75 €</td>
-      </tr>
-      <tr className="price-table__row">
-        <td className="price-table__service">Sokeroinnit</td>
-        <td className="price-table__price">Alk. 20 €</td>
-      </tr>
-      <tr className="price-table__row">
-        <td className="price-table__service price-table__service--special">
-          Kasvot (15 min)
+          Bikinilinja
         </td>
         <td className="price-table__price">20 €</td>
       </tr>
       <tr className="price-table__row">
         <td className="price-table__service price-table__service--special">
-          Sääret (20 min)
+          Kainalot
         </td>
-        <td className="price-table__price">30 €</td>
+        <td className="price-table__price">20 €</td>
       </tr>
       <tr className="price-table__row">
         <td className="price-table__service price-table__service--special">
-          Bikini (30 min)
+          Käsivarret
+        </td>
+        <td className="price-table__price">25 €</td>
+      </tr>
+      <tr className="price-table__row">
+        <td className="price-table__service price-table__service--special">
+          Brasilialainen ensimmäinen kerta
+        </td>
+        <td className="price-table__price">60 €</td>
+      </tr>
+      <tr className="price-table__row">
+        <td className="price-table__service price-table__service--special">
+          Brasilialainen ylläpito
         </td>
         <td className="price-table__price">50 €</td>
       </tr>
       <tr className="price-table__row">
-        <td className="price-table__service">Ehostukset</td>
-        <td className="price-table__price">Alk. 20 €</td>
+        <td className="price-table__service price-table__service--special">
+          Ylähuuli
+        </td>
+        <td className="price-table__price">10 €</td>
       </tr>
       <tr className="price-table__row">
         <td className="price-table__service price-table__service--special">
-          Häämeikki (90 min)
+          Kulmakarvat
+        </td>
+        <td className="price-table__price">
+          10 € (kestovärjäyksen yhteydessä 5 €)
+        </td>
+      </tr>
+      <tr className="price-table__row">
+        <td className="price-table__service price-table__service--special">
+          Useamman alueen sokeroinnista räätälöidään pakettihinta
+        </td>
+        <td className="price-table__price" />
+      </tr>
+      <tr className="price-table__row">
+        <td className="price-table__service">Meikit</td>
+        <td className="price-table__price">Alk. 40 €</td>
+      </tr>
+      <tr className="price-table__row">
+        <td className="price-table__service price-table__service--special">
+          Juhla- / häämeikki + koemeikki
         </td>
         <td className="price-table__price">80 €</td>
       </tr>
@@ -91,9 +97,51 @@ const PriceTable = () => (
       </tr>
       <tr className="price-table__row">
         <td className="price-table__service price-table__service--special">
-          Juhlameikki (60 min)
+          Juhlameikki
         </td>
-        <td className="price-table__price">60 €</td>
+        <td className="price-table__price">50 €</td>
+      </tr>
+      <tr className="price-table__row">
+        <td className="price-table__service price-table__service--special">
+          Päivämeikki
+        </td>
+        <td className="price-table__price">40 €</td>
+      </tr>
+      <tr className="price-table__row">
+        <td className="price-table__service price-table__service--special">
+          Meikkiopastus
+        </td>
+        <td className="price-table__price">40 €</td>
+      </tr>
+      <tr className="price-table__row">
+        <td className="price-table__service">
+          Hoitojen yhteydessä kulmien ja ripsien kestovärjäys
+        </td>
+        <td className="price-table__price">Alk. 10 €</td>
+      </tr>
+      <tr className="price-table__row">
+        <td className="price-table__service price-table__service--special">
+          Kulmat
+        </td>
+        <td className="price-table__price">10 €</td>
+      </tr>
+      <tr className="price-table__row">
+        <td className="price-table__service price-table__service--special">
+          Ripset
+        </td>
+        <td className="price-table__price">10 €</td>
+      </tr>
+      <tr className="price-table__row">
+        <td className="price-table__service price-table__service--special">
+          Kulmat ja ripset
+        </td>
+        <td className="price-table__price">18 €</td>
+      </tr>
+      <tr className="price-table__row">
+        <td className="price-table__service price-table__service--special">
+          Kulmat ja ripset + kulmien muotoilu sokeroinnilla
+        </td>
+        <td className="price-table__price">23 €</td>
       </tr>
     </tbody>
   </table>

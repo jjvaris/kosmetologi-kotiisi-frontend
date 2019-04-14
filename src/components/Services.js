@@ -11,8 +11,12 @@ const Services = () => {
       <div className="content">
         <h1 style={{ marginBottom: '50px' }}>PALVELUT</h1>
         <div className="service-img">
-          <h2 style={{ textDecoration: 'underline', marginBottom: '50px' }}>
-            SOKEROINTI
+          <h2
+            style={{
+              marginBottom: '50px'
+            }}
+          >
+            SOKEROINNIT
           </h2>
           <img
             className=""

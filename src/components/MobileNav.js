@@ -3,7 +3,7 @@ import Close from './Close';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Facebook, Instagram } from './socials';
 
-const Modal = ({ show, onHide }) => {
+const MobileNav = ({ show, onHide }) => {
   const css = show ? 'modal modal--open' : 'modal modal--closed';
 
   return (
@@ -38,4 +38,4 @@ const Modal = ({ show, onHide }) => {
   );
 };
 
-export default Modal;
+export default MobileNav;
