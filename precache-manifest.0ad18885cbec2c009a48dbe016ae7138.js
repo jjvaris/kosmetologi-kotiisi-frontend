@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "047730c49d2e1a851aeb",
+    "revision": "670bbc5a0b58f361fdfe",
     "url": "/kosmetologi-kotiisi-frontend/static/css/main.925436e9.chunk.css"
   },
   {
-    "revision": "047730c49d2e1a851aeb",
-    "url": "/kosmetologi-kotiisi-frontend/static/js/main.0b8e6080.chunk.js"
+    "revision": "670bbc5a0b58f361fdfe",
+    "url": "/kosmetologi-kotiisi-frontend/static/js/main.1622a353.chunk.js"
   },
   {
     "revision": "56b376697fb3b5d4f126",
@@ -36,7 +36,7 @@ self.__precacheManifest = [
     "url": "/kosmetologi-kotiisi-frontend/static/media/tuotteet.61bff86d.jpg"
   },
   {
-    "revision": "305a9c78eaf75132b7f253314de62572",
+    "revision": "5c9317556bed656085c18b6893bcf76d",
     "url": "/kosmetologi-kotiisi-frontend/index.html"
   }
 ];
