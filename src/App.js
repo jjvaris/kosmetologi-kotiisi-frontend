@@ -61,7 +61,7 @@ class App extends Component {
             </header>
             <div className="app__scroll">
               <div id="scroll-down">
-                <AnchorLink href="#esittely">
+                <AnchorLink href="#palvelut">
                   <span />
                   <span />
                   <span />
