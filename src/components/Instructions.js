@@ -6,24 +6,10 @@ const Instructions = () => (
     <ul>
       <li>Älä kuori sokeroitavaa aluetta 24h ennen hoitoa</li>
       <li>Intiimialueen sokerointiin tullessasi huolehdi hygieniasta</li>
-      <li>Sopiva karvanpituus on vähintään 3mm (n. 2 viikkoa sheivauksesta)</li>
+      <li>Sopiva karvanpituus on vähintään 2mm n. 2 viikkoa sheivauksesta</li>
       <li>Älä kosteuta sokeroitavaa aluetta samana päivänä</li>
     </ul>
-    <h3>Esteet sokeroinnille</h3>
-    <ul>
-      <li>Ihotulehdukset</li>
-      <li>Ihosairaudet</li>
-      <li>Tuoreet arvet</li>
-      <li>Haavat</li>
-      <li>Isot mustelmat</li>
-      <li>Isot ja arat suonikohjut</li>
-      <li>Auringon polttama iho</li>
-      <li>Syylät sokeroitavalla alueella</li>
-      <li>
-        Reitin-A -lääkitys Retinol- hoito tai -lääkitys tai Roacutan- lääkitys
-      </li>
-      <li>Varsiluomet hoidettavalla alueella</li>
-    </ul>
+
     <h3>Kotihoito-ohjeet sokeroinnin jälkeen</h3>
     <ul>
       <li>Vältä hikoilua 24h</li>
@@ -44,6 +30,20 @@ const Instructions = () => (
       </li>
       <li>Vältä hankaavia ja tiukkoja vaatteita sokeroinnin jälkeen</li>
       <li>Brasilialaisen sokeroinnin jälkeen huolehdi hyvin hygieniasta 24h</li>
+    </ul>
+    <h3>Esteet sokeroinnille</h3>
+    <ul>
+      <li>Ihotulehdukset</li>
+      <li>Tuoreet arvet</li>
+      <li>Haavat</li>
+      <li>Isot mustelmat</li>
+      <li>Isot ja arat suonikohjut</li>
+      <li>Auringon polttama iho</li>
+      <li>Syylät sokeroitavalla alueella</li>
+      <li>
+        Reitin-A -lääkitys Retinol- hoito tai -lääkitys tai Roacutan- lääkitys
+      </li>
+      <li>Varsiluomet hoidettavalla alueella</li>
     </ul>
   </div>
 );

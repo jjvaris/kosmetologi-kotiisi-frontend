@@ -9,7 +9,8 @@ import lady from './static/lady2.jpg';
 import sokerointi from './static/sokerointi.jpg';
 import image1 from './static/i_1.jpg';
 import image2 from './static/i_2.jpg';
-import image3 from './static/i_3.jpg';
+import logo from './static/logo.jpg';
+import alexandriaLogo from './static/alexandria-logo.png';
 import ContactForm from './components/ContactForm';
 import PriceTable from './components/PriceTable';
 import Instructions from './components/Instructions';
@@ -40,9 +41,9 @@ class App extends Component {
               <Modal show={this.state.showModal} onHide={this.hideModal} />
             </nav>
             <nav className="app__nav app__nav--desktop">
-              <AnchorLink href="#esittely">Esittely</AnchorLink>
               {/* <AnchorLink href="#hoidot">Hoidot</AnchorLink> */}
               <AnchorLink href="#palvelut">Palvelut</AnchorLink>
+              <AnchorLink href="#esittely">Esittely</AnchorLink>
               <AnchorLink href="#hinnasto">Hinnasto</AnchorLink>
               <AnchorLink href="#ota-yhteytta">Ota Yhteyttä</AnchorLink>
               <AnchorLink href="#yhteystiedot">Yhteystiedot</AnchorLink>
@@ -51,9 +52,9 @@ class App extends Component {
               <div className="app__title">
                 {/* <FlourishFrame /> */}
                 <h3 className="app__beauty_by font-playfair">
-                  Kosmetologi kotiisi
+                  KOSMETOLOGI KOTIISI
                 </h3>
-                <h1 className="app__company_name font-playfair">Niina Varis</h1>
+                <h1 className="app__company_name font-playfair">NIINA VARIS</h1>
                 {/* <FlourishFrame reversed /> */}
                 {/* <p>KAUNEUDEN HOITOPALVELUT</p> */}
               </div>
@@ -70,31 +71,42 @@ class App extends Component {
           </div>
         </Div100>
         <main>
-          <section id="esittely">
-            <div className="introduction content">
-              <div className="avatar">
-                <img className="avatar__img" src={niina} alt="Niina Varis" />
-              </div>
-              <h1>Niina Varis</h1>
-              <p>
-                Hei olen Niina ja lorem Ipsum is simply dummy text of the
-                printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an
-                unknown printer took a galley of type and scrambled
-              </p>
-            </div>
-          </section>
-          {/* <img
-            src={sokerointi}
-            alt="sokerointi promokuva"
-            className="sokerointi__img"
-          /> */}
-          <section id="palvelut" className="dark">
+          <section id="palvelut" className="">
             <div className="content">
-              <h1>Palvelut</h1>
+              <h1 style={{ marginBottom: '50px' }}>PALVELUT</h1>
+              <div className="service-img">
+                <h2
+                  style={{ textDecoration: 'underline', marginBottom: '50px' }}
+                >
+                  SOKEROINTI
+                </h2>
+                <img
+                  className=""
+                  src={alexandriaLogo}
+                  alt="Alexandria Professional logo"
+                />
+              </div>
               <div className="sokerointi">
-                <h3>Sokerointi</h3>
-                <p>Tekstiä sokeroinnista yms.</p>
+                {/* <h3 style={{ marginBottom: '30px' }}>
+                  ALEXANDRIA PROFESSIONAL &reg; BODY SUGARING
+                </h3> */}
+                {/* <h3>Alexandria Professional Body Sugaring</h3> */}
+                <p style={{ textAlign: 'start' }}>
+                  Alexandria Professional &reg; sokerointi on
+                  maailmanlaajuisesti johtava karvanpoistomenetelmä yli
+                  kahdenkymmenen vuoden kokemuksella.
+                </p>
+                <p style={{ textAlign: 'start' }}>
+                  Sokerointi on hygieeninen ja täysin vegaaninen
+                  karvanpoistomenetelmä. Karvat poistetaan karvan kasvusuuntaan,
+                  jolloin ne eivät katkeile ja iho pysyy karvattomana pidempään.
+                  Sokeroinnilla voidaan poistaa jopa alle kahden millimetrin
+                  pituisia karvoja. Sokerointi poistaa myös kuollutta
+                  ihosolukkoa, joten se on mitä parhain vartalon kuorinta
+                  menetelmä. Sokeri ei tartu eläviin ihosoluihin, joten sillä
+                  saadaan turvallisesti ja hellävaraisesti poistettua myös
+                  intiimialueen karvat.
+                </p>
                 <button
                   className="sokerointi__button"
                   onClick={() =>
@@ -103,16 +115,21 @@ class App extends Component {
                     })
                   }
                 >
-                  {this.state.showInstructions ? '⇧' : '⇩'} Tutustu sokeroinnin
-                  ohjeisiin {this.state.showInstructions ? '⇧' : '⇩'}
+                  {this.state.showInstructions ? '' : ''} Tutustu sokeroinnin
+                  ohjeisiin {this.state.showInstructions ? '' : ''}
                 </button>
-                <SmoothCollapse expanded={this.state.showInstructions}>
+                <SmoothCollapse
+                  expanded={this.state.showInstructions}
+                  heightTransition="ease-in-out .5s"
+                >
                   <Instructions />
                 </SmoothCollapse>
               </div>
               <div className="sokerointi">
-                <h3>Hoidot</h3>
-                <p>
+                <h2 style={{ marginTop: '50px', marginBottom: '30px' }}>
+                  MEIKKAUKSET - JANE IREDALE &reg;
+                </h2>
+                <p style={{ textAlign: 'start' }}>
                   Lorem Ipsum is simply dummy text of the printing and
                   typesetting industry. Lorem Ipsum has been the industry's
                   standard dummy text ever since the 1500s, when an unknown
@@ -127,7 +144,23 @@ class App extends Component {
               </div>
             </div>
           </section>
-          <div className="image-grid">
+          <div className="bg-image-products" />
+          <section id="esittely" className="dark">
+            <div className="introduction content">
+              <div className="avatar">
+                <img className="avatar__img" src={niina} alt="Niina Varis" />
+              </div>
+              <h1>NIINA VARIS</h1>
+              <p>Kosmetologi kotiisi esittely</p>
+            </div>
+          </section>
+          {/* <img
+            src={sokerointi}
+            alt="sokerointi promokuva"
+            className="sokerointi__img"
+          /> */}
+
+          {/* <div className="image-grid">
             <div style={{ backgroundImage: `url(${lady})` }} />
             <div
               style={{
@@ -137,14 +170,14 @@ class App extends Component {
             />
             <div style={{ backgroundImage: `url(${image2})` }} />
             <div style={{ backgroundImage: `url(${image3})` }} />
-          </div>
+          </div> */}
           <section id="hinnasto">
             {/* <img
               src={lady}
               alt="Alexandria promokuva"
               style={{ width: '100%' }}
             /> */}
-            <h1>Hinnasto</h1>
+            <h1>HINNASTO</h1>
 
             <PriceTable />
             <p
@@ -169,22 +202,22 @@ class App extends Component {
               meikki-illasta!
             </p>
           </section>
-          <div className="bg-image-fixed">
-            <h1>Jotain tekstiä</h1>
-          </div>
+          {/* <img className="full-width-img" src={makeup} /> */}
+          <div className="bg-image-fixed" />
           <section id="ota-yhteytta" className="dark">
-            <h1>Ota yhteyttä</h1>
+            <h1>OTA YHTEYTTÄ</h1>
             <ContactForm />
           </section>
         </main>
         <footer id="yhteystiedot">
           <div>
-            <h1>Yhteystiedot</h1>
+            <h1>YHTEYSTIEDOT</h1>
             <p>Niina Varis</p>
-            <p>SKY-kosmetolgi, lähihoitaja</p>
-            <p>040 058 6586</p>
-            <p>niina.varis@gmail.com</p>
-            <p>Y: 2332198-1</p>
+            <p>SKY-kosmetologi, lähihoitaja</p>
+            <p>0400 586 586</p>
+            <p>varis.niina@gmail.com</p>
+            <p>Y: 2254322-5</p>
+            <p>Joensuu</p>
 
             <div className="socials">
               <a href="http://facebook.com">
@@ -194,10 +227,18 @@ class App extends Component {
                 <Instagram />
               </a>
             </div>
+            <div className="service-img">
+              <img
+                className="kosmetologi-kotiisi-logo"
+                src={logo}
+                alt="Kosmetologi kotiisi logo"
+                style={{ marginBottom: '10px' }}
+              />
+            </div>
             <p
               style={{
                 textAlign: 'center',
-                paddingTop: '30px',
+                paddingTop: '10px',
                 fontSize: '0.7em'
               }}
             >
