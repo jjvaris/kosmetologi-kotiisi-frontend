@@ -69,15 +69,19 @@ const PriceTable = () => (
         <td className="price-table__service price-table__service--special">
           Kulmakarvat
         </td>
-        <td className="price-table__price">
-          10 € (kestovärjäyksen yhteydessä 5 €)
-        </td>
+        <td className="price-table__price">10 €</td>
       </tr>
       <tr className="price-table__row">
         <td className="price-table__service price-table__service--special">
-          Useamman alueen sokeroinnista räätälöidään pakettihinta
+          Kulmakarvat kestovärjäyksen yhteydessä
         </td>
-        <td className="price-table__price" />
+        <td className="price-table__price">5 €</td>
+      </tr>
+      <tr className="price-table__row">
+        <td className="price-table__service price-table__service--special">
+          Useamman alueen sokerointi
+        </td>
+        <td className="price-table__price">Kysy tarjous!</td>
       </tr>
       <tr className="price-table__row">
         <td className="price-table__service">Meikit</td>
