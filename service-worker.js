@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/kosmetologi-kotiisi-frontend/precache-manifest.feea22290812eaf348964d0aac08bc54.js"
+  "/kosmetologi-kotiisi-frontend/precache-manifest.8f5f40d2991c6aec44492f5644fc22d0.js"
 );
 
 workbox.clientsClaim();
