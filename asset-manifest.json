@@ -1,18 +1,18 @@
 {
-  "main.css": "/kosmetologi-kotiisi-frontend/static/css/main.925436e9.chunk.css",
-  "main.js": "/kosmetologi-kotiisi-frontend/static/js/main.1622a353.chunk.js",
-  "main.js.map": "/kosmetologi-kotiisi-frontend/static/js/main.1622a353.chunk.js.map",
+  "main.css": "/kosmetologi-kotiisi-frontend/static/css/main.09b345c4.chunk.css",
+  "main.js": "/kosmetologi-kotiisi-frontend/static/js/main.c140d7b2.chunk.js",
+  "main.js.map": "/kosmetologi-kotiisi-frontend/static/js/main.c140d7b2.chunk.js.map",
   "runtime~main.js": "/kosmetologi-kotiisi-frontend/static/js/runtime~main.543c56b3.js",
   "runtime~main.js.map": "/kosmetologi-kotiisi-frontend/static/js/runtime~main.543c56b3.js.map",
   "static/js/2.26cfc792.chunk.js": "/kosmetologi-kotiisi-frontend/static/js/2.26cfc792.chunk.js",
   "static/js/2.26cfc792.chunk.js.map": "/kosmetologi-kotiisi-frontend/static/js/2.26cfc792.chunk.js.map",
   "index.html": "/kosmetologi-kotiisi-frontend/index.html",
-  "precache-manifest.0ad18885cbec2c009a48dbe016ae7138.js": "/kosmetologi-kotiisi-frontend/precache-manifest.0ad18885cbec2c009a48dbe016ae7138.js",
+  "precache-manifest.f6e1c91fc702d87e785d9a352715620c.js": "/kosmetologi-kotiisi-frontend/precache-manifest.f6e1c91fc702d87e785d9a352715620c.js",
   "service-worker.js": "/kosmetologi-kotiisi-frontend/service-worker.js",
-  "static/css/main.925436e9.chunk.css.map": "/kosmetologi-kotiisi-frontend/static/css/main.925436e9.chunk.css.map",
-  "static/media/index.css": "/kosmetologi-kotiisi-frontend/static/media/14.10f3ed4c.jpg",
-  "static/media/2.jpg": "/kosmetologi-kotiisi-frontend/static/media/2.fcbc7acc.jpg",
+  "static/css/main.09b345c4.chunk.css.map": "/kosmetologi-kotiisi-frontend/static/css/main.09b345c4.chunk.css.map",
+  "static/media/brushes.jpg": "/kosmetologi-kotiisi-frontend/static/media/brushes.958dce7e.jpg",
+  "static/media/landing.jpg": "/kosmetologi-kotiisi-frontend/static/media/landing.a1b2e72f.jpg",
   "static/media/logo.jpg": "/kosmetologi-kotiisi-frontend/static/media/logo.27567695.jpg",
-  "static/media/niina.jpg": "/kosmetologi-kotiisi-frontend/static/media/niina.aa01fcc3.jpg",
-  "static/media/tuotteet.jpg": "/kosmetologi-kotiisi-frontend/static/media/tuotteet.61bff86d.jpg"
+  "static/media/niina.jpg": "/kosmetologi-kotiisi-frontend/static/media/niina.e33fa6da.jpg",
+  "static/media/products.jpg": "/kosmetologi-kotiisi-frontend/static/media/products.cab7f1f2.jpg"
 }
