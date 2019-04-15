@@ -5,9 +5,9 @@ import Services from './components/Services';
 import Footer from './components/Footer';
 import Introduction from './components/Introduction';
 import LandingPage from './components/LandingPage';
-import makeUp from './static/14.jpg';
-import tuotteet from './static/tuotteet.jpg';
-import { Parallax, Background } from 'react-parallax';
+import brushes from './static/brushes.jpg';
+import products from './static/products.jpg';
+import { Parallax } from 'react-parallax';
 
 class App extends Component {
   render() {
@@ -18,7 +18,7 @@ class App extends Component {
           <Services />
           {/* <div className="bg-image-products" /> */}
           <Parallax
-            bgImage={tuotteet}
+            bgImage={products}
             bgImageAlt="Sokerointi tuotteita"
             strength={200}
             bgClassName="bg-img"
@@ -80,7 +80,7 @@ class App extends Component {
           {/* <img className="full-width-img" src={makeup} /> */}
 
           {/* <div className="bg-image-fixed" /> */}
-          <Parallax bgImage={makeUp} bgImageAlt="Meikkejä" strength={200}>
+          <Parallax bgImage={brushes} bgImageAlt="Meikkejä" strength={200}>
             <div style={{ height: '300px' }} />
           </Parallax>
           <section id="ota-yhteytta" className="dark">

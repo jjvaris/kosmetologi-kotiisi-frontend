@@ -4,7 +4,7 @@ import Modal from '../components/MobileNav';
 import Div100 from '../components/Div100';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Parallax } from 'react-parallax';
-import bgImg from '../static/2.jpg';
+import bgImg from '../static/landing.jpg';
 
 const LandingPage = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
