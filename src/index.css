@@ -724,6 +724,8 @@ td.price-table__service {
   width: 100%;
   object-fit: cover;
   object-position: center;
+  transition: filter 2s;
+  filter: blur(100px);
 }
 
 .bg-image-products {

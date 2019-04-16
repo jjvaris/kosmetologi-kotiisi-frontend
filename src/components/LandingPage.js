@@ -1,18 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Burger from '../components/Burger';
 import Modal from '../components/MobileNav';
 import Div100 from '../components/Div100';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Parallax } from 'react-parallax';
 import bgImg from '../static/landing.jpg';
+import bgPlaceholder from '../static/landing-placeholder.jpg';
 
 const LandingPage = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
+  const [loadState, setLoadState] = useState({
+    src: bgPlaceholder,
+    loaded: false
+  });
+
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => {
+      setLoadState({ src: img.src, loaded: true });
+    };
+    img.src = bgImg;
+  }, []);
 
   return (
     <Parallax
-      bgImage={bgImg}
-      bgImageAlt="Sokerointi tuotteita"
+      bgImage={loadState.src}
+      bgImageAlt="Etusivun kuva kukista"
       strength={200}
       bgClassName="bg-img"
     >
