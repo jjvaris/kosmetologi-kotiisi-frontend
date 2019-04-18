@@ -52,6 +52,11 @@ footer {
   padding: 30px;
 }
 
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
 .content {
   width: 100%;
   max-width: 500px;
@@ -638,43 +643,22 @@ td.price-table__service {
   font-size: 0.8em;
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-moz-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes fadeIn {
   from {
     opacity: 0;
+    transform: translateY(10px);
   }
   to {
     opacity: 1;
+    transform: translateY(0px);
   }
 }
 
 .fade-in {
-  opacity: 0; /* make things invisible upon start */
-  -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-  -moz-animation: fadeIn ease-in 1;
-  animation: fadeIn ease-in 1;
-
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateY(0px);
+  animation: fadeIn ease 1;
   animation-fill-mode: forwards;
-
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
   animation-duration: 1s;
 }
 
@@ -724,8 +708,8 @@ td.price-table__service {
   width: 100%;
   object-fit: cover;
   object-position: center;
-  transition: filter 2s;
-  filter: blur(100px);
+  transition: filter 1.5s;
+  filter: blur(20px);
 }
 
 .bg-image-products {

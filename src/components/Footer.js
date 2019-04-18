@@ -8,15 +8,22 @@ const Footer = () => (
       <h1>YHTEYSTIEDOT</h1>
       <p>Niina Varis</p>
       <p>SKY-kosmetologi, lähihoitaja</p>
-      <p>0400 586 586</p>
-      <p>varis.niina@gmail.com</p>
+      <p>
+        <a href="tel:0400586586">0400 586 586</a>
+      </p>
+      <p>
+        <a href="https://wa.me/358400586586">WhatsApp</a>
+      </p>
+      <p>
+        <a href="mailto:varis.niina@gmail.com">varis.niina@gmail.com</a>
+      </p>
       <p>Y: 2254322-5</p>
       <p>Joensuu</p>
       <div className="socials">
-        <a href="http://facebook.com">
+        <a href="https://www.facebook.com/kosmetologikotiisi/">
           <Facebook style={{ marginRight: '15px' }} />
         </a>
-        <a href="http://instagram.com">
+        <a href="https://www.instagram.com/kosmetologikotiisi/">
           <Instagram />
         </a>
       </div>
@@ -37,7 +44,12 @@ const Footer = () => (
       >
         COPYRIGHT &copy; 2019
       </p>
-      <p style={{ fontSize: '0.7em', textAlign: 'center' }}>Design by Jouni</p>
+      <p style={{ fontSize: '0.7em', textAlign: 'center' }}>
+        Design by{' '}
+        <a href="https://www.linkedin.com/in/jouni-varis-990a5585/">
+          Jouni Varis
+        </a>
+      </p>
     </div>
   </footer>
 );

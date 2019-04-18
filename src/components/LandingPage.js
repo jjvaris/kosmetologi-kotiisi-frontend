@@ -3,7 +3,7 @@ import Burger from '../components/Burger';
 import Modal from '../components/MobileNav';
 import Div100 from '../components/Div100';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { Parallax } from 'react-parallax';
+import { Parallax, Background } from 'react-parallax';
 import bgImg from '../static/landing.jpg';
 import bgPlaceholder from '../static/landing-placeholder.jpg';
 
@@ -28,6 +28,7 @@ const LandingPage = () => {
       bgImageAlt="Etusivun kuva kukista"
       strength={200}
       bgClassName="bg-img"
+      blur={0.0001}
     >
       <Div100 className="app">
         <div className="wrapper">
@@ -39,7 +40,6 @@ const LandingPage = () => {
             />
           </nav>
           <nav className="app__nav app__nav--desktop">
-            {/* <AnchorLink href="#hoidot">Hoidot</AnchorLink> */}
             <AnchorLink href="#palvelut">Palvelut</AnchorLink>
             <AnchorLink href="#esittely">Esittely</AnchorLink>
             <AnchorLink href="#hinnasto">Hinnasto</AnchorLink>
