@@ -6,7 +6,7 @@ const Instructions = () => (
     <ul>
       <li>Älä kuori sokeroitavaa aluetta 24h ennen hoitoa</li>
       <li>Intiimialueen sokerointiin tullessasi huolehdi hygieniasta</li>
-      <li>Sopiva karvanpituus on vähintään 2mm n. 2 viikkoa sheivauksesta</li>
+      <li>Sopiva karvanpituus on vähintään 2mm</li>
       <li>Älä kosteuta sokeroitavaa aluetta samana päivänä</li>
     </ul>
 
@@ -41,7 +41,7 @@ const Instructions = () => (
       <li>Auringon polttama iho</li>
       <li>Syylät sokeroitavalla alueella</li>
       <li>
-        Reitin-A -lääkitys Retinol- hoito tai -lääkitys tai Roacutan- lääkitys
+        Reitin-A -lääkitys, Retinol- hoito tai -lääkitys tai Roacutan- lääkitys
       </li>
       <li>Varsiluomet hoidettavalla alueella</li>
     </ul>
