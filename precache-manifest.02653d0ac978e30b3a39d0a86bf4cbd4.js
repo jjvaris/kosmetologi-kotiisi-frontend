@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "2125fe11d63c607c9635",
+    "revision": "9d29ec91ef74ad713712",
     "url": "/static/css/main.8918aeb3.chunk.css"
   },
   {
-    "revision": "2125fe11d63c607c9635",
-    "url": "/static/js/main.5d2e4785.chunk.js"
+    "revision": "9d29ec91ef74ad713712",
+    "url": "/static/js/main.013f0064.chunk.js"
   },
   {
     "revision": "fdfcfda2d9b1bf31db52",
@@ -20,10 +20,6 @@ self.__precacheManifest = [
     "url": "/static/media/logo.27567695.jpg"
   },
   {
-    "revision": "e33fa6da26440ae8301377ed96b24265",
-    "url": "/static/media/niina.e33fa6da.jpg"
-  },
-  {
     "revision": "a1b2e72f56f9db341727d58dc5c373ac",
     "url": "/static/media/landing.a1b2e72f.jpg"
   },
@@ -36,7 +32,7 @@ self.__precacheManifest = [
     "url": "/static/media/products.cab7f1f2.jpg"
   },
   {
-    "revision": "fb7c6217a33cc58798fe1824c780bdbd",
+    "revision": "a99e2ca4ce37df01fb7f79271b9e515c",
     "url": "/index.html"
   }
 ];
