@@ -1,5 +1,5 @@
 import React from 'react';
-import niina from '../static/niina.jpg';
+import niina from '../static/niina-ava.jpg';
 
 const Introduction = () => (
   <section id="esittely" className="dark">

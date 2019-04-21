@@ -52,7 +52,7 @@ class App extends Component {
             /> */}
             <div className="content">
               <h1>HINNASTO</h1>
-
+              <p>Tuon mukanani hoitopöydän ja kaiken tarvittavan.</p>
               <PriceTable />
               <p
                 style={{
