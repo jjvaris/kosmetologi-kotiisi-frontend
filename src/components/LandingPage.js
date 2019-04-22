@@ -3,7 +3,7 @@ import Burger from '../components/Burger';
 import Modal from '../components/MobileNav';
 import Div100 from '../components/Div100';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { Parallax, Background } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 import bgImg from '../static/landing.jpg';
 import bgPlaceholder from '../static/landing-placeholder.jpg';
 

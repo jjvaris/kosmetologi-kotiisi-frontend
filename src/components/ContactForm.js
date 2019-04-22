@@ -31,6 +31,10 @@ export default class ContactForm extends Component {
     }
   };
 
+  componentDidMount() {
+    axios.get('https://kosmetologi-kotiisi-email.herokuapp.com/api/health');
+  }
+
   handleChange = event => {
     this.setState({ touched: true });
     const { name, value } = event.target;
