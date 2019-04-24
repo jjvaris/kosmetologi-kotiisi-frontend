@@ -61,7 +61,7 @@ const Services = () => {
           <h2 style={{ marginTop: '50px', marginBottom: '30px' }}>
             MEIKKAUKSET &reg; JANE IREDALE
           </h2>
-          <p style={{ textAlign: 'center' }}>
+          <p style={{ textAlign: 'start' }}>
             Jane Iredale on 100% mineraalimeikkisarja, jonka valmistuksessa
             käytetään ainoastaan puhtaita luonnon mineraaleja.
           </p>
