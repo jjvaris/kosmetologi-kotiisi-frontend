@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../static/logo.jpg';
+import tietosuojaseloste from '../static/tietosuojaseloste.pdf';
 import { Facebook, Instagram } from '../components/socials';
 
 const Footer = () => (
@@ -35,10 +36,21 @@ const Footer = () => (
           style={{ marginBottom: '10px' }}
         />
       </div>
+
       <p
         style={{
           textAlign: 'center',
-          paddingTop: '10px',
+          paddingTop: '0px',
+          fontSize: '0.7em'
+        }}
+      >
+        <a href={tietosuojaseloste}>Tietosuojaseloste</a>
+      </p>
+
+      <p
+        style={{
+          textAlign: 'center',
+          paddingTop: '40px',
           fontSize: '0.7em'
         }}
       >
