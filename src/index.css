@@ -3,8 +3,8 @@
 
   --global--dark-bg-color: rgb(90, 141, 118);
   /* --global--dark-bg-color: #191606; */
-  --global--bg-color: rgb(247, 243, 241);
-  /* --global--bg-color: #ffffff; */
+  /* --global--bg-color: rgb(247, 243, 241); */
+  --global--bg-color: #ffffff;
   /* Font colors */
   --global--dark-font-color: black;
   --global--font-color: white;
@@ -758,11 +758,6 @@ td.price-table__service {
   font-weight: 600; */
   font-weight: 300;
   color: rgb(90, 141, 118);
-}
-
-.service-img {
-  display: grid;
-  justify-content: center;
 }
 
 .service-img > img {

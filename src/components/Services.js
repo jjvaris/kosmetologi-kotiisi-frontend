@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import alexandriaLogo from '../static/alexandria-logo.png';
+import janeIredaleLogo from '../static/jane_iredale.jpg';
 import Instructions from './Instructions';
 import SmoothCollapse from 'react-smooth-collapse';
 
@@ -13,16 +14,13 @@ const Services = () => {
         <div className="service-img">
           <h2
             style={{
-              marginBottom: '50px'
+              marginBottom: '50px',
+              fontSize: '1.4em'
             }}
           >
             SOKEROINNIT
           </h2>
-          <img
-            className=""
-            src={alexandriaLogo}
-            alt="Alexandria Professional logo"
-          />
+          <img src={alexandriaLogo} alt="Alexandria Professional logo" />
         </div>
         <div className="sokerointi">
           {/* <h3 style={{ marginBottom: '30px' }}>
@@ -30,9 +28,9 @@ const Services = () => {
                 </h3> */}
           {/* <h3>Alexandria Professional Body Sugaring</h3> */}
           <p style={{ textAlign: 'start' }}>
-            Alexandria Professional &reg; sokerointi on maailmanlaajuisesti
-            johtava karvanpoistomenetelmä yli kahdenkymmenen vuoden
-            kokemuksella.
+            Alexandria Professional<sup>&reg;</sup> sokerointi on
+            maailmanlaajuisesti johtava karvanpoistomenetelmä yli kahdenkymmenen
+            vuoden kokemuksella.
           </p>
           <p style={{ textAlign: 'start' }}>
             Sokerointi on hygieeninen ja täysin vegaaninen
@@ -57,13 +55,24 @@ const Services = () => {
             <Instructions />
           </SmoothCollapse>
         </div>
-        <div className="sokerointi">
-          <h2 style={{ marginTop: '50px', marginBottom: '30px' }}>
-            MEIKKAUKSET &reg; JANE IREDALE
+        <div className="sokerointi service-img">
+          <h2
+            style={{
+              fontSize: '1.4em',
+              marginTop: '50px',
+              marginBottom: '30px'
+            }}
+          >
+            MEIKKAUKSET
           </h2>
+          <img
+            style={{ marginBottom: '20px' }}
+            src={janeIredaleLogo}
+            alt="Jane Iredale logo"
+          />
           <p style={{ textAlign: 'start' }}>
-            Jane Iredale on 100% mineraalimeikkisarja, jonka valmistuksessa
-            käytetään ainoastaan puhtaita luonnon mineraaleja.
+            Jane Iredale<sup>&reg;</sup> on 100% mineraalimeikkisarja, jonka
+            valmistuksessa käytetään ainoastaan puhtaita luonnon mineraaleja.
           </p>
         </div>
       </div>
