@@ -8,48 +8,35 @@ import LandingPage from './components/LandingPage';
 import brushes from './static/brushes.jpg';
 import products from './static/products.jpg';
 import { Parallax } from 'react-parallax';
+import { getInstagramFeed } from './api';
+import InstagramFeed from './components/InstagramFeed';
+import ContactDetails from './components/ContactDetails';
 
 class App extends Component {
+  state = {
+    instaFeed: undefined
+  };
+
+  componentDidMount() {
+    getInstagramFeed().then(response => this.setState({ instaFeed: response }));
+  }
+
   render() {
     return (
       <React.Fragment>
         <LandingPage />
         <main>
           <Services />
-          {/* <div className="bg-image-products" /> */}
           <Parallax
             bgImage={products}
             bgImageAlt="Sokerointi tuotteita"
             strength={200}
             bgClassName="bg-img"
           >
-            {/* <div className="bg-image-products" /> */}
             <div className="bg-image-products" />
           </Parallax>
           <Introduction />
-          {/* <img
-            src={sokerointi}
-            alt="sokerointi promokuva"
-            className="sokerointi__img"
-          /> */}
-
-          {/* <div className="image-grid">
-            <div style={{ backgroundImage: `url(${lady})` }} />
-            <div
-              style={{
-                backgroundImage: `url(${image1})`,
-                backgroundPosition: 'unset'
-              }}
-            />
-            <div style={{ backgroundImage: `url(${image2})` }} />
-            <div style={{ backgroundImage: `url(${image3})` }} />
-          </div> */}
           <section id="hinnasto">
-            {/* <img
-              src={lady}
-              alt="Alexandria promokuva"
-              style={{ width: '100%' }}
-            /> */}
             <div className="content">
               <h1>HINNASTO</h1>
               <p>Tuon mukanani hoitopöydän ja kaiken tarvittavan.</p>
@@ -77,9 +64,6 @@ class App extends Component {
               </p>
             </div>
           </section>
-          {/* <img className="full-width-img" src={makeup} /> */}
-
-          {/* <div className="bg-image-fixed" /> */}
           <Parallax bgImage={brushes} bgImageAlt="Meikkejä" strength={200}>
             <div style={{ height: '300px' }} />
           </Parallax>
@@ -90,6 +74,10 @@ class App extends Component {
             </div>
           </section>
         </main>
+        <ContactDetails />
+        {this.state.instaFeed && (
+          <InstagramFeed instaFeed={this.state.instaFeed} />
+        )}
         <Footer />
       </React.Fragment>
     );

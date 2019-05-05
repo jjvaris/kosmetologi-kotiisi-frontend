@@ -1,9 +1,6 @@
 :root {
   /* Background colors */
-
   --global--dark-bg-color: rgb(90, 141, 118);
-  /* --global--dark-bg-color: #191606; */
-  /* --global--bg-color: rgb(247, 243, 241); */
   --global--bg-color: #ffffff;
   /* Font colors */
   --global--dark-font-color: black;
@@ -23,8 +20,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font: var(--global--text-font);
-  /* font-weight: 300; */
-  /* font-size: 1em; */
   word-break: break-word;
 }
 
@@ -35,9 +30,6 @@ h4,
 h5,
 h6 {
   font: var(--global--header-font);
-  /* text-transform: uppercase; */
-  /* font-style: italic;
-  font-weight: 200; */
 }
 
 h1 {
@@ -62,11 +54,6 @@ a {
   max-width: 500px;
 }
 
-section img {
-  width: 100%;
-  max-width: 500px;
-}
-
 button:focus {
   outline: 0;
 }
@@ -77,7 +64,6 @@ button:focus {
 }
 
 .app {
-  /* background: url(./static/2.jpg) center; */
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -119,7 +105,6 @@ button:focus {
 
 .app__nav > a:hover {
   border: 1px solid white;
-  /* background-color: rgba(0, 0, 0, 0.1); */
 }
 
 @media only screen and (max-width: 700px) {
@@ -132,9 +117,6 @@ button:focus {
 }
 
 .app__title {
-  /* border-style: solid; */
-  /* border-width: 2px; */
-  /* border-color: white; */
   padding: 5px 0px 5px 0px;
   width: 100%;
   padding: 20px;
@@ -146,7 +128,6 @@ button:focus {
   align-items: center;
   justify-content: center;
   background-clip: content-box;
-  /* background-color: rgba(41, 145, 113, 0.8); */
 }
 
 .app__h3 {
@@ -159,7 +140,6 @@ button:focus {
   margin-bottom: 0px;
   font-size: 3em;
   padding-bottom: 5px;
-  /* font-weight: 900; */
 }
 
 .app__header {
@@ -168,7 +148,6 @@ button:focus {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* font-size: calc(10px + 2vmin); */
   padding: 20px;
   color: var(--global--font-color);
   font-weight: 100;
@@ -219,27 +198,6 @@ button:focus {
   width: 150px;
 }
 
-.sokerointi__img {
-  /* -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  border-radius: 50%; */
-
-  width: 100%;
-  /* background: url(./static/sokerointi.jpg) center; */
-
-  /* background-size: cover; */
-  /* box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.4) inset;
-  -moz-box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.4) inset;
-  -webkit-box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.4) inset; */
-}
-
-.circle img {
-  width: 100%;
-  border-radius: 50%;
-  z-index: -1;
-  position: relative;
-}
-
 #burger {
   width: 30px;
   height: 30px;
@@ -250,20 +208,17 @@ button:focus {
   padding: 0;
   font: inherit;
   outline: inherit;
-  /* display: none; */
 }
+
 #burger div {
   display: grid;
   grid-template-rows: auto auto auto;
   align-items: center;
   height: 100%;
 }
-/* #burger button {
-  border: none;
-} */
+
 #burger span {
   display: block;
-  /* background: white; */
   background-color: var(--global--bg-color);
   height: 1px;
   width: 100%;
@@ -365,7 +320,6 @@ button:focus {
   display: flex;
   justify-content: center;
   padding-left: 8px;
-  /* transform: translateX(-5px); */
 }
 
 .socials svg {
@@ -384,18 +338,6 @@ button:focus {
 svg {
   fill: currentColor;
   display: inline;
-}
-
-.flourish-frame {
-  max-width: 400px;
-}
-
-.flourish-frame--reversed {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
 }
 
 #scroll-down {
@@ -580,7 +522,6 @@ svg {
   max-width: 500px;
   border-spacing: 0px;
 }
-
 .price-table th {
   border-bottom: 1px solid #191606;
   font-size: 1.1em;
@@ -588,7 +529,6 @@ svg {
 .price-table td {
   border-bottom: 1px solid lightgray;
 }
-
 .price-table__service {
   width: 70%;
   text-align: left;
@@ -597,25 +537,21 @@ svg {
   font: var(--global--header-font);
   font-weight: 300;
 }
-
 .price-table__service--special {
   padding-left: 10px;
   font-size: 0.9em;
   font-weight: 200;
 }
-
 td.price-table__service {
   padding-top: 5px;
   padding-bottom: 5px;
 }
-
 .price-table__price {
   width: 160px;
   text-align: right;
   font: var(--global--header-font);
   font-weight: 200;
   font-size: 0.9em;
-  /* font-weight: bold; */
 }
 
 /* Instructions component */
@@ -664,28 +600,58 @@ td.price-table__service {
 
 .image-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* max-height: 500px;
-  max-width: 500px; */
-  height: 100vw;
-
-  /* grid-template-rows: calc(100vh / 2) calc(100 / 2); */
+  grid-template-columns: 1fr;
 }
 
-.image-grid > div {
-  /* max-height: 250px; */
-  height: 50vw;
+.instagram-img-container {
+  height: 100vw;
   width: 100%;
-  background-size: cover;
-  background-position: center;
+  position: relative;
+}
+
+.instagram-img-container__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.instagram-img-container__hover-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: grid;
+  align-content: center;
+}
+
+.instagram-img-container__hover-bg > span {
+  display: none;
+}
+
+.instagram-img-container__hover-bg:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.instagram-img-container__hover-bg:hover span {
+  display: inline;
+}
+
+@media only screen and (min-width: 400px) {
+  .image-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .instagram-img-container {
+    height: 50vw;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
   .image-grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    height: 25vw;
   }
-  .image-grid > div {
+  .instagram-img-container {
     height: 25vw;
   }
 }
@@ -693,18 +659,14 @@ td.price-table__service {
 .bg-image-fixed {
   width: 100%;
   height: 50vh;
-  /* background-image: url(./static/14.jpg); */
   background-size: cover;
   background-position: center;
-  /* background-attachment: scroll; */
   text-align: center;
   display: grid;
   align-content: center;
 }
 
 .bg-img {
-  /* background-size: cover;
-  background-position: center; */
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -715,10 +677,8 @@ td.price-table__service {
 .bg-image-products {
   width: 100%;
   height: 30vh;
-  /* background-image: url(./static/tuotteet.jpg); */
   background-size: cover;
   background-position: center;
-  /* background-attachment: scroll; */
   text-align: center;
   display: grid;
   align-content: center;
@@ -742,20 +702,14 @@ td.price-table__service {
 
 #palvelut h1,
 #palvelut h2 {
-  /* font-family: 'Source Code Pro', monospace;
-  font-weight: 600; */
   font-weight: 300;
   color: rgb(90, 141, 118);
 }
 #hinnasto h1 {
-  /* font-family: 'Source Code Pro', monospace;
-  font-weight: 600; */
   font-weight: 300;
   color: rgb(90, 141, 118);
 }
 #yhteystiedot h1 {
-  /* font-family: 'Source Code Pro', monospace;
-  font-weight: 600; */
   font-weight: 300;
   color: rgb(90, 141, 118);
 }

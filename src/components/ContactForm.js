@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import BeatLoader from 'react-spinners/BeatLoader';
+import * as api from '../api';
 
 export default class ContactForm extends Component {
   state = {
@@ -31,11 +31,10 @@ export default class ContactForm extends Component {
     }
   };
 
-  componentDidMount() {
-    axios.get('https://kosmetologi-kotiisi-email.herokuapp.com/api/health');
-  }
-
   handleChange = event => {
+    if (!this.state.touched) {
+      api.wakeUpEmailService();
+    }
     this.setState({ touched: true });
     const { name, value } = event.target;
     if (this.state.errors[name]) {
@@ -65,16 +64,14 @@ export default class ContactForm extends Component {
     this.setState({ submitting: true });
     const { email, name, phoneNumber, message } = this.state.formData;
 
-    axios
-      .post('https://kosmetologi-kotiisi-email.herokuapp.com/api/email', {
+    api
+      .sendEmail({
         from: email,
         name,
         phoneNumber,
         message
       })
-      .then(response => {
-        console.log(response);
-        console.log('Form submitted');
+      .then(() => {
         this.setState({
           formData: {
             name: '',
@@ -96,7 +93,6 @@ export default class ContactForm extends Component {
   };
 
   formIsValid() {
-    console.log('validating form...', this.state);
     const { name, email, message } = this.state.formData;
     const errors = {};
     if (!this.validators.name.isValid(name))
