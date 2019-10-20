@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../static/logo.jpg';
 import tietosuojaseloste from '../static/tietosuojaseloste.pdf';
+import { Date } from 'core-js';
 
 const Footer = () => (
   <footer>
@@ -28,7 +29,7 @@ const Footer = () => (
         fontSize: '0.7em'
       }}
     >
-      COPYRIGHT &copy; 2019
+      COPYRIGHT &copy; {new Date().getFullYear()}
     </p>
     <p style={{ fontSize: '0.7em', textAlign: 'center' }}>
       Design by{' '}
