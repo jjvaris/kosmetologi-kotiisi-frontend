@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Campaign from './components/Campaign';
 import ContactForm from './components/ContactForm';
 import PriceTable from './components/PriceTable';
 import Services from './components/Services';
@@ -25,7 +26,8 @@ class App extends Component {
     return (
       <React.Fragment>
         <LandingPage />
-        <main>
+        <main id="main">
+          <Campaign until={new Date('2019-12-23')} />
           <Services />
           <Parallax
             bgImage={products}

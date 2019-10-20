@@ -55,7 +55,7 @@ const LandingPage = () => {
           </header>
           <div className="app__scroll">
             <div id="scroll-down">
-              <AnchorLink href="#palvelut">
+              <AnchorLink href="#main">
                 <span />
                 <span />
                 <span />
