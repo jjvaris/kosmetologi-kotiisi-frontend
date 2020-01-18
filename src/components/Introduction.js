@@ -9,7 +9,6 @@ const Introduction = () => (
       </div>
       <h1>NIINA VARIS</h1>
       <p>
-        Tarjoan kosmetologin palveluita suoraan kotiisi Joensuun alueella.
         Koulutukseltani olen SKY-kosmetologi sekä lähihoitaja. Palveluihin
         kuuluvat ihokarvojen hellävarainen poisto sokeroinnilla sekä meikkaukset
         yli kymmenen vuoden ammattitaidolla.
