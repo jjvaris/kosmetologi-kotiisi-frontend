@@ -44,8 +44,8 @@ class App extends Component {
               <p>Tuon mukanani hoitopöydän ja kaiken tarvittavan.</p>
               <PriceTable />
               <p style={{ fontSize: '0.9em', textAlign: 'left' }}>
-                <span style={{ fontSize: '1.2em' }}>&#42;</span> Brasilialaiset
-                sokeroinnit vain täysi-ikäisille.
+                <span style={{ fontSize: '1.2em' }}>&#42;</span> Brasilialainen
+                sokerointi vain täysi-ikäisille.
               </p>
               <p
                 style={{
