@@ -42,7 +42,7 @@ const Services = () => {
             jolloin ne eivät katkeile ja iho pysyy karvattomana pidempään.
             Sokeroinnilla voidaan poistaa jopa alle kahden millimetrin pituisia
             karvoja. Sokerointi poistaa myös kuollutta ihosolukkoa, joten se on
-            mitä parhain vartalon kuorinta menetelmä. Sokeri ei tartu eläviin
+            mitä parhain vartalonkuorintamenetelmä. Sokeri ei tartu eläviin
             ihosoluihin, joten sillä saadaan turvallisesti ja hellävaraisesti
             poistettua myös intiimialueen karvat.
           </p>
