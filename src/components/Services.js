@@ -11,15 +11,15 @@ const Services = () => {
     <section id="palvelut" className="">
       <div className="content">
         <h1 style={{ marginBottom: '50px' }}>PALVELUT</h1>
-        <p style={{ marginBottom: '30px' }}>
+        {/* <p style={{ marginBottom: '30px' }}>
           Sokeroinnit ja meikkaukset suoraan kotiisi Joensuussa ja sen
           lähialueilla (max 15 km Joensuusta).
-        </p>
+        </p> */}
         <div className="service-img">
           <h2
             style={{
               marginBottom: '50px',
-              fontSize: '1.4em'
+              fontSize: '1.4em',
             }}
           >
             SOKEROINNIT
@@ -64,7 +64,7 @@ const Services = () => {
             style={{
               fontSize: '1.4em',
               marginTop: '50px',
-              marginBottom: '30px'
+              marginBottom: '30px',
             }}
           >
             MEIKKAUKSET

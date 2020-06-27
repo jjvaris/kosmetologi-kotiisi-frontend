@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Instagram } from '../components/socials';
+import { GoLocation } from 'react-icons/go';
 
 const ContactDetails = () => (
   <section id="yhteystiedot">
@@ -16,8 +17,15 @@ const ContactDetails = () => (
       <p>
         <a href="mailto:varis.niina@gmail.com">varis.niina@gmail.com</a>
       </p>
+      <p>
+        <a href="https://goo.gl/maps/KZbydxJmQrKjZtUg7">
+          <GoLocation /> Nepenmäenkatu 6A (Vetrea)
+        </a>
+      </p>
+      <p>
+        <a href="https://goo.gl/maps/KZbydxJmQrKjZtUg7">80200 Joensuu</a>
+      </p>
       <p>Y: 2254322-5</p>
-      <p>Joensuu</p>
       <div className="socials">
         <a href="https://www.facebook.com/kosmetologikotiisi/">
           <Facebook style={{ marginRight: '15px' }} />

@@ -12,14 +12,17 @@ import { Parallax } from 'react-parallax';
 import { getInstagramFeed } from './api';
 import InstagramFeed from './components/InstagramFeed';
 import ContactDetails from './components/ContactDetails';
+import Map from './components/Map';
 
 class App extends Component {
   state = {
-    instaFeed: undefined
+    instaFeed: undefined,
   };
 
   componentDidMount() {
-    getInstagramFeed().then(response => this.setState({ instaFeed: response }));
+    getInstagramFeed().then((response) =>
+      this.setState({ instaFeed: response })
+    );
   }
 
   render() {
@@ -41,18 +44,18 @@ class App extends Component {
           <section id="hinnasto">
             <div className="content">
               <h1>HINNASTO</h1>
-              <p>Tuon mukanani hoitopöydän ja kaiken tarvittavan.</p>
+              {/* <p>Tuon mukanani hoitopöydän ja kaiken tarvittavan.</p> */}
               <PriceTable />
               <p style={{ fontSize: '0.9em', textAlign: 'left' }}>
                 <span style={{ fontSize: '1.2em' }}>&#42;</span> Brasilialainen
                 sokerointi vain täysi-ikäisille.
               </p>
-              <p
+              {/* <p
                 style={{
                   fontSize: '1.1em',
                   maxWidth: '500px',
                   textAlign: 'center',
-                  marginTop: '30px'
+                  marginTop: '30px',
                 }}
               >
                 Kutsu kotiisi myös kaverisi ja saat alennusta hoidoistasi -10%
@@ -62,12 +65,12 @@ class App extends Component {
                 style={{
                   fontSize: '1.1em',
                   maxWidth: '500px',
-                  textAlign: 'center'
+                  textAlign: 'center',
                 }}
               >
                 Ota rohkeasti yhteyttä ja pyydä tarjous esimerkiksi
                 meikki-illasta!
-              </p>
+              </p> */}
             </div>
           </section>
           <Parallax bgImage={brushes} bgImageAlt="Meikkejä" strength={200}>
@@ -79,11 +82,12 @@ class App extends Component {
               <ContactForm />
             </div>
           </section>
+          <Map />
+          <ContactDetails />
+          {this.state.instaFeed && (
+            <InstagramFeed instaFeed={this.state.instaFeed} />
+          )}
         </main>
-        <ContactDetails />
-        {this.state.instaFeed && (
-          <InstagramFeed instaFeed={this.state.instaFeed} />
-        )}
         <Footer />
       </React.Fragment>
     );

@@ -22,7 +22,7 @@ const MobileNav = ({ show, onHide }) => {
         <AnchorLink onClick={onHide} href="#ota-yhteytta">
           Ota Yhteyttä
         </AnchorLink>
-        <AnchorLink onClick={onHide} href="#yhteystiedot">
+        <AnchorLink onClick={onHide} href="#map">
           Yhteystiedot
         </AnchorLink>
         <div className="modal__socials">

@@ -11,7 +11,7 @@ const LandingPage = () => {
   const [showMobileNav, setShowMobileNav] = useState(false);
   const [loadState, setLoadState] = useState({
     src: bgPlaceholder,
-    loaded: false
+    loaded: false,
   });
 
   useEffect(() => {
@@ -48,7 +48,7 @@ const LandingPage = () => {
           </nav>
           <header className="app__header fade-in">
             <div className="app__title">
-              <h3 className="app__h3 font-playfair">KOSMETOLOGI KOTIISI</h3>
+              <h3 className="app__h3 font-playfair">KOSMETOLOGIPALVELUT</h3>
               <h1 className="app__company_name font-playfair">NIINA VARIS</h1>
               <h3 className="app__h3">JOENSUU</h3>
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../static/logo.jpg';
+import logo from '../static/logo2.jpg';
 import tietosuojaseloste from '../static/tietosuojaseloste.pdf';
 import { Date } from 'core-js';
 
@@ -9,15 +9,15 @@ const Footer = () => (
       <img
         className="kosmetologi-kotiisi-logo"
         src={logo}
-        alt="Kosmetologi kotiisi logo"
-        style={{ marginBottom: '10px' }}
+        alt="Kosmetologipalvelut Niina Varis logo"
+        style={{ marginBottom: '30px' }}
       />
     </div>
     <p
       style={{
         textAlign: 'center',
         paddingTop: '0px',
-        fontSize: '0.7em'
+        fontSize: '0.7em',
       }}
     >
       <a href={tietosuojaseloste}>Tietosuojaseloste</a>
@@ -26,7 +26,7 @@ const Footer = () => (
       style={{
         textAlign: 'center',
         paddingTop: '40px',
-        fontSize: '0.7em'
+        fontSize: '0.7em',
       }}
     >
       COPYRIGHT &copy; {new Date().getFullYear()}

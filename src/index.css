@@ -692,7 +692,7 @@ td.price-table__service {
 
 @media only screen and (orientation: landscape) {
   .bg-image-products {
-    height: 100vh;
+    height: 80vh;
   }
 }
 
@@ -720,7 +720,7 @@ td.price-table__service {
 }
 
 .kosmetologi-kotiisi-logo {
-  width: 100px;
+  width: 200px;
   margin-top: 50px;
 }
 
